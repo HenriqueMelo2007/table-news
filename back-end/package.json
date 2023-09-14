@@ -1,0 +1,21 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "author": "Henrique Melo",
+  "description": "",
+  "license": "ISC",
+  "main": "server.js",
+  "repository": "https://github.com/HenriqueMelo2007/table-news",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fastify": "^4.23.2",
+    "fastify-cors": "^6.1.0",
+    "postgres": "^3.3.5"
+  }
+}
