@@ -1,0 +1,25 @@
+'use client'
+
+import Image from "next/image"
+import { useState, useContext } from "react"
+import { ContextTheme } from "@/contexts/contextTheme"
+
+export function Header () {
+
+  const { theme, setTheme } = useContext(ContextTheme)
+
+  return (
+    <header className={ `px-3 py-4 flex items-center justify-between text-white ${theme ? 'bg-light-blue-900' : 'bg-dark-translucent'}` }>
+      <div className="flex justify-center items-center">
+        <Image className="mr-2" alt="Logo TableNews" src='/table-24px.png' width={24} height={24}></Image>
+        <h1 className='text-base'>TableNews</h1>
+      </div>
+      <div className="flex justify-center items-center gap-2">
+        <input placeholder="Pesquisar" type="text" className={`outline-none rounded-lg w-72 h-8`} />
+        <Image onClick={() => setTheme(!theme)} className="mr-2 hover:cursor-pointer" alt="Logo TableNews" src={`${theme ? '/moon-icon-theme.png' : '/sun-icon-theme.png'}`} width={18} height={18}></Image>
+        <p className="text-base">Login</p>
+        <p className="text-base">Cadastrar</p>
+      </div>
+    </header>
+  )
+}

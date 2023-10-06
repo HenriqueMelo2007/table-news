@@ -1,11 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Roboto } from 'next/font/google'
+import { Header } from '@/components/header'
+import { ProviderContextTheme } from '@/contexts/contextTheme'
 
 const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({weight: '400', subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: 'Table News',
+  title: 'TableNews',
   description: '',
 }
 
@@ -15,8 +18,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className='p-0 m-0 box-border' lang="pt-br">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br" className='m-0 p-0 box-border'>
+      <body className={roboto.className}>
+        <ProviderContextTheme>
+          <Header></Header>
+          {children}
+        </ProviderContextTheme>
+      </body>
     </html>
   )
 }
