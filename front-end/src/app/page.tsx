@@ -1,5 +1,13 @@
+'use client'
+
+import { useContext } from "react"
+import { ContextTheme } from "@/contexts/contextTheme"
+
 export default function Home() {
+
+  const { theme } = useContext(ContextTheme)
+
   return (
-    <h1 className="">Table news</h1>
+    <main className={` w-full h-screen ${ theme ? 'bg-white' : 'bg-black' }`}></main>
   )
 }

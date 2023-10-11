@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         'light-blue-900': 'rgb(36, 41, 47)',
 
-        'dark-translucent': 'rgba(255, 255, 255, 0.7)',
+        'dark-translucent': 'rgba(0, 0, 0, 0.8)',
       },
     },
   },
