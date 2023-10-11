@@ -15,7 +15,7 @@ export function Header () {
         <h1 className='text-base'>TableNews</h1>
       </div>
       <div className="flex justify-center items-center gap-2">
-        <input placeholder="Pesquisar" type="text" className={`outline-none rounded-lg w-72 h-8`} />
+        <input placeholder="Pesquisar" type="text" className={` px-4  outline-none rounded-lg w-72 h-8 ${ theme ? 'text-light-blue-900' : 'bg-dark-translucent' } `} />
         <Image onClick={() => setTheme(!theme)} className="mr-2 hover:cursor-pointer" alt="Logo TableNews" src={`${theme ? '/moon-icon-theme.png' : '/sun-icon-theme.png'}`} width={18} height={18}></Image>
         <p className="text-base">Login</p>
         <p className="text-base">Cadastrar</p>
